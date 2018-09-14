@@ -1,14 +1,38 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Pomodoro to do list</title>
-        <link href="css/style.css">
-    </head>
-    <body>
-    
-
-    <script src="jscript/index.js"></script>
+  <head>
+    <title>Pomodoro Todo List</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link id="favicon" rel="icon" href="img/pomodoro-timer" type="image/x-icon">
+  </head>
+  <body>
+    <div id="main">
+      <h1>Please enter your to do list</h1>
+        <div id="buttonsandinput">
+          <div id="input">
+            <button onclick="handlers.toggleAll()" id="toggleAll"><p>Toggle All</p></button>
+          </div>
+          
+          <div id="input">
+            <button onclick="handlers.addTodo()" id="addTodoButton"><p>Add</p></button>
+            <input id="addTodoTextInput" type="text" placeholder="Add todo here">
+          </div>
+          
+          <div id="input">
+            <button onclick="handlers.changeTodo()" id="changeTodoButton"><p>Change Todo</p></button>
+            <input id="changeTodoPositionInput" type="number" placeholder="Position of todo you want changed">
+            <input id="changeTodoTextInput" type="text" placeholder="New todo">
+          </div>
+          
+          <div id="input">
+            <button onclick="handlers.toggleCompleted()" id="completedButton"><p>Toggle Completed</p></button>
+            <input id="toggleCompletedPositionInput" type="number" placeholder="Position of todo completed">
+          </div>
+          
+          <ol>
+          </ol>
+        </div>
+      <script src="jscript/index.js"></script>
     </body>
+  </div>
 </html>
